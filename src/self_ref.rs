@@ -1,13 +1,19 @@
 #[derive(Debug)]
 struct SelfRef<'a> {
-    value: String,
-    pointer_to_value: &'a str,
+    data: RefData,
+    pointer_to_data: &'a RefData,
+}
+#[derive(Debug)]
+struct RefData {
+    data: String
 }
 
 pub fn new_self_ref() {
-    let s = "aaa".to_string();
+    let data = RefData{
+        data: "Rust".to_string()
+    };
     let v = SelfRef {
-        value: s,
-        pointer_to_value: &s
+        data,
+        pointer_to_data: &data
     };
 }
