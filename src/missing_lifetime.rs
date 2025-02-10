@@ -1,0 +1,3 @@
+struct MissingLifetime {
+    name: &str
+}
