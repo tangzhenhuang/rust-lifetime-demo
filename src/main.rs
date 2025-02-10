@@ -5,6 +5,7 @@ mod async_ref;
 mod lock_lifetime_in_async;
 mod closure_lifetime;
 mod self_ref;
+mod static_lifetime;
 
 #[tokio::main]
 async fn main() {
